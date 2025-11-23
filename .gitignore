@@ -1,0 +1,72 @@
+# ==============================================
+# 1. SEGURIDAD (CRÍTICO)
+# ==============================================
+# Nunca subir claves API ni secretos
+config/api_key.txt
+api_key.txt
+config/.env
+.env
+
+# ==============================================
+# 2. DATOS E INSUMOS (ETL)
+# ==============================================
+# Ignoramos todos los datos porque suelen ser pesados o sensibles.
+# Los scripts deben ser capaces de regenerar 'processed' y 'gold'.
+data/
+# Excepción: Si quieres mantener la estructura de carpetas vacías,
+# podrías usar un .gitkeep, pero por defecto mejor ignorar todo data.
+
+# ==============================================
+# 3. RESULTADOS GENERADOS (ARTIFACTS)
+# ==============================================
+# Ignoramos las imágenes y reportes generados automáticamente
+# para no ensuciar el historial de versiones.
+reports/diagrams/
+reports/eda/
+
+# Si la carpeta 'docs' contiene documentación manual, NO la ignores.
+# Si es generada automática, descomenta la siguiente línea:
+# reports/docs/
+
+# ==============================================
+# 4. PYTHON & ENTORNO VIRTUAL
+# ==============================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Entornos virtuales
+venv/
+env/
+ENV/
+.venv/
+
+# ==============================================
+# 5. IDEs & SISTEMA OPERATIVO
+# ==============================================
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini
