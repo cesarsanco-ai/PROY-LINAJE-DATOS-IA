@@ -7,7 +7,8 @@ api_key.txt
 config/.env
 config/
 .env
-
+mi_estructura_actual.txt
+README_old.md
 # ==============================================
 # 2. DATOS E INSUMOS (ETL)
 # ==============================================

@@ -5,6 +5,5 @@ openai==2.8.1
 streamlit==1.51.0
 matplotlib==3.10.7
 seaborn==0.13.2
-wordcloud==1.9.4
 numpy==2.3.3
 python-dotenv==1.0.1
