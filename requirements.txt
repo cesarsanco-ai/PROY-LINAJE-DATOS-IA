@@ -1,5 +1,4 @@
 pandas==2.3.3
-pyodbc==5.2.0
 networkx==3.5
 sqlglot==28.0.0
 openai==2.8.1

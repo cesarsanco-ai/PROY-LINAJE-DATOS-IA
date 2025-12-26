@@ -1,0 +1,15 @@
+services:
+  lineage-app:
+    build: .
+    container_name: lineage-app
+    ports:
+      - "8501:8501"
+    volumes:
+      # Mapeamos la data local para persistencia y acceso
+      - ./data:/app/data
+      # Mapeamos reportes si se generan
+      - ./reports:/app/reports
+      # IMPORTANTE: Mapeamos config para acceder a api_key.txt
+      - ./config:/app/config
+    # Reiniciar siempre si falla
+    restart: always

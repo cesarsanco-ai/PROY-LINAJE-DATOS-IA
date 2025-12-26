@@ -279,8 +279,19 @@ def guardar_maestro(maestro, nombre_archivo="maestro_trazabilidad_completo.json"
     """Guarda el maestro en la carpeta GOLD"""
     try:
         ruta_salida = os.path.join(GOLD_DIR, nombre_archivo)
+    # Función auxiliar para convertir sets a listas recursivamente
+        def convert_sets_to_lists(obj):
+            if isinstance(obj, set):
+                return list(obj)
+            if isinstance(obj, dict):
+                return {k: convert_sets_to_lists(v) for k, v in obj.items()}
+            if isinstance(obj, list):
+                return [convert_sets_to_lists(i) for i in obj]
+            return obj
+
+        maestro_serializable = convert_sets_to_lists(maestro)
         with open(ruta_salida, 'w', encoding='utf-8') as f:
-            json.dump(maestro, f, indent=2, ensure_ascii=False)
+            json.dump(maestro_serializable, f, indent=2, ensure_ascii=False)
         print(f"\n💾 Maestro guardado exitosamente en:\n   {ruta_salida}")
     except Exception as e:
         print(f"❌ Error guardando maestro: {e}")

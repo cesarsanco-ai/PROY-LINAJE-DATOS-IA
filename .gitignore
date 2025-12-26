@@ -5,6 +5,7 @@
 config/api_key.txt
 api_key.txt
 config/.env
+config/
 .env
 
 # ==============================================
