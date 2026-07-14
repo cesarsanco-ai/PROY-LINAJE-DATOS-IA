@@ -1,4 +1,4 @@
-# 🕵️‍♂️ Sistema de Linaje de Datos & Auditoría con IA (RTM Gloria)
+# 🕵️‍♂️ Sistema de Linaje de Datos & Auditoría con IA
 
 Este proyecto implementa un pipeline de Ingeniería de Datos para extraer, procesar y analizar el linaje de datos de SQL Server. Utiliza Grafos (NetworkX) e Inteligencia Artificial (OpenAI) para entender la lógica de negocio oculta en los Stored Procedures.
 
